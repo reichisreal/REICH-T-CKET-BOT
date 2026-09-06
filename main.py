@@ -49,7 +49,7 @@ def check_and_install_packages():
                 try:
                     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
                 except Exception as e:
-                    print(f"[HATA] {package} yüklenemedi: {e}")
+                    print(f"[REICH] {package} yüklenemedi: {e}")
 
 check_and_install_packages()
 
@@ -139,7 +139,7 @@ async def close_ticket_logic(channel, author, guild):
 
                 await log_channel.send(embed=log_embed, file=transcript_file)
             except Exception as e:
-                print(f"[HATA] Log atılırken bir sorun oluştu: {e}")
+                print(f"[REICH] Log atılırken bir sorun oluştu: {e}")
 
     await channel.delete()
 
